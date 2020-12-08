@@ -8,18 +8,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import uaa.methodologyquiz.MainApp;
 import uaa.methodologyquiz.controllers.*;
-import static uaa.methodologyquiz.datagen.MethodologyGenerator.generateAllMethodologies;
-import static uaa.methodologyquiz.datagen.QuestionGenerator.generateAllQuestions;
+
 
 /**
  *
  * @author root
  */
 public enum FxmlEnum {
-    INDEX("Index"),
-    METHODOLOGIES("Methodologies"),
-    METHODOLOGYINFO("MethodologyInfo"),
-    QUIZ("Quiz");
+    INDEX("Index");
+    
+    
+   
 
     private final String name;
 
@@ -46,20 +45,7 @@ public enum FxmlEnum {
         FXMLLoader loader = new FXMLLoader(this.location());
         Map<Class, Callable<?>> initializer = new HashMap<Class, Callable<?>>(){
             {
-                put(
-                    QuizController.class, 
-                    () -> new QuizController(
-                        generateAllQuestions(), 
-                        // generateAllMethodologies()
-                        MainApp.MethodologiesToShow
-                    )
-                );
-                put(
-                    MethodologiesController.class, 
-                    () -> new MethodologiesController(
-                        MainApp.MethodologiesToShow
-                    )
-                );
+               
             }
         };
         
