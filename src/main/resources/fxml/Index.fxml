@@ -14,7 +14,7 @@
         <URL value="@/styles/index.css" />
     </stylesheets>
    <children>
-      <TextField layoutY="29.0" prefHeight="212.0" prefWidth="800.0" />
+      <TextField fx:id="resultDisplay" editable="false" layoutY="29.0" prefHeight="212.0" prefWidth="800.0" />
       <Pane layoutY="249.0" prefHeight="351.0" prefWidth="800.0" style="-fx-background-color: #0288d1;">
          <children>
             <GridPane layoutX="20.0" layoutY="25.0" prefHeight="302.0" prefWidth="412.0">
@@ -30,19 +30,19 @@
                   <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="8" GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="9" GridPane.columnIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="4" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="1" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="0" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="7" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="Button" />
+                  <Button fx:id="eigth" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="8" GridPane.columnIndex="1" />
+                  <Button fx:id="nine" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="9" GridPane.columnIndex="2" />
+                  <Button fx:id="four" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="4" GridPane.rowIndex="1" />
+                  <Button fx:id="five" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="six" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="one" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="1" GridPane.rowIndex="2" />
+                  <Button fx:id="two" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="three" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="zero" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="0" GridPane.rowIndex="3" />
+                  <Button fx:id="seven" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="7" />
+                  <Button fx:id="point" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="equal" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                </children>
             </GridPane>
             <GridPane layoutX="622.0" layoutY="26.0" prefHeight="300.0" prefWidth="131.0">
@@ -57,11 +57,11 @@
                   <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="_" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="*" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="/" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="AC" />
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" text="+" GridPane.rowIndex="4" />
+                  <Button fx:id="min" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="_" GridPane.rowIndex="3" />
+                  <Button fx:id="mul" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="*" GridPane.rowIndex="2" />
+                  <Button fx:id="div" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="/" GridPane.rowIndex="1" />
+                  <Button fx:id="ac" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="AC" />
+                  <Button fx:id="plus" mnemonicParsing="false" onAction="#Calculator" prefHeight="84.0" prefWidth="138.0" text="+" GridPane.rowIndex="4" />
                </children>
             </GridPane>
          </children>
