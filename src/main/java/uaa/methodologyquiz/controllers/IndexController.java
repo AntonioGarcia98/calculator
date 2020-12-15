@@ -181,6 +181,7 @@ public class IndexController implements Initializable {
 
             }
             ps = 0;
+        }
     }
 
 }
