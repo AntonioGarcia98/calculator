@@ -99,8 +99,15 @@ public class IndexController implements Initializable {
             resultDisplay.appendText("5");
         } else if (event.getSource() == six) {
             resultDisplay.appendText("6");
-        } 
-
+        } else if (event.getSource() == seven) {
+            resultDisplay.appendText("7");
+        } else if (event.getSource() == eigth) {
+            resultDisplay.appendText("8");
+        } else if (event.getSource() == nine) {
+            resultDisplay.appendText("9");
+        } else if (event.getSource() == zero) {
+            resultDisplay.appendText("0");
+        }
     }
 
 }
