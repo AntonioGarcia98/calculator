@@ -87,8 +87,19 @@ public class IndexController implements Initializable {
 
     @FXML
     private void Calculator(ActionEvent event) {
-
-       
+        if (event.getSource() == one) { 
+            resultDisplay.appendText("1");
+        } else if (event.getSource() == two) {
+            resultDisplay.appendText("2");
+        } else if (event.getSource() == three) {
+            resultDisplay.appendText("3");
+        } else if (event.getSource() == four) {
+            resultDisplay.appendText("4");
+        } else if (event.getSource() == five) {
+            resultDisplay.appendText("5");
+        } else if (event.getSource() == six) {
+            resultDisplay.appendText("6");
+        } 
 
     }
 
