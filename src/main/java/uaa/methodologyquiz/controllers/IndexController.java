@@ -107,7 +107,80 @@ public class IndexController implements Initializable {
             resultDisplay.appendText("9");
         } else if (event.getSource() == zero) {
             resultDisplay.appendText("0");
-        }
+        }else if (event.getSource() == ac) {
+
+            resultDisplay.setText("");
+            input1 = 0;
+            input2 = 0;
+            points = false;
+            result = 0;
+            ps = 0;
+
+        } else if (event.getSource() == point && points == false) {
+
+            resultDisplay.appendText(".");
+            points = true;
+
+        } else if (event.getSource() == plus) {
+
+            input1 = Double.parseDouble(resultDisplay.getText());
+            resultDisplay.setText("");
+            ps = 1;
+            points = false;
+
+        } else if (event.getSource() == plus) {
+
+            input1 = Double.parseDouble(resultDisplay.getText());
+            resultDisplay.setText("");
+            ps = 1;
+            points = false;
+
+        } else if (event.getSource() == min) {
+
+            input1 = Double.parseDouble(resultDisplay.getText());
+            resultDisplay.setText("");
+            ps = 2;
+            points = false;
+
+        } else if (event.getSource() == div) {
+
+            input1 = Double.parseDouble(resultDisplay.getText());
+            resultDisplay.setText("");
+            ps = 3;
+            points = false;
+
+        } else if (event.getSource() == mul) {
+
+            input1 = Double.parseDouble(resultDisplay.getText());
+            resultDisplay.setText("");
+            ps = 4;
+            points = false;
+
+        } else if (event.getSource() == equal && ps > 0) {
+
+            input2 = Double.parseDouble(resultDisplay.getText());
+            DecimalFormat td = new DecimalFormat("#.00");
+
+            switch (ps) {
+                case 1:
+                    result = input1 + input2;
+                    resultDisplay.setText(String.valueOf(td.format(result)));
+                    break;
+                case 2:
+                    result = input1 - input2;
+                    resultDisplay.setText(String.valueOf(td.format(result)));
+                    break;
+                case 3:
+                    result = input1 / input2;
+                    resultDisplay.setText(String.valueOf(td.format(result)));
+                    break;
+                case 4:
+                    result = input1 * input2;
+                    resultDisplay.setText(String.valueOf(td.format(result)));
+                    break;
+
+            }
+            ps = 0;
     }
 
 }
